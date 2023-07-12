@@ -1,0 +1,36 @@
+{
+  "name": "git-raw-prettier",
+  "version": "0.0.1",
+  "description": "Chrome extension for prettifying raw GitHub content",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch --config config/webpack.config.js",
+    "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\"",
+    "pack": "node pack.js",
+    "repack": "npm run build && npm run pack"
+  },
+  "author": {
+    "name": "Sayed Ahmed",
+    "email": "sayeed205@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayeed205/git-raw-prettier"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.240",
+    "adm-zip": "^0.5.10",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0"
+  }
+}
