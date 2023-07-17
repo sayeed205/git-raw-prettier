@@ -22,7 +22,7 @@ Prettify your GitHub Gist and GitHub raw links with.
 
 - [x] Add minimal UI for prettifying GitHub raw links.
 
-- [ ] Add button for copying the code.
+- [x] Add button for copying the code.
 
 - [ ] Add button for downloading the code.
 

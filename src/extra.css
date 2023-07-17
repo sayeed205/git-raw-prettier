@@ -16,6 +16,23 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  border-radius: 1rem;
+  padding: 4px 8px;
+  background-color: #585656;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
 }
 
 pre::-webkit-scrollbar {
