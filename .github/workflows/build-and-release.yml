@@ -2,7 +2,7 @@ name: Build and Release
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths: # Add a path filter to run only if package.json is changed
       - 'package.json'
 
