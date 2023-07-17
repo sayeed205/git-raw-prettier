@@ -1,22 +1,27 @@
 'use strict';
 
-// Content script file will run in the context of web page.
-// With content script you can manipulate the web pages using
-// Document Object Model (DOM).
-// You can also pass information to the parent extension.
+import hljs from 'highlight.js';
+import 'highlight.js/styles/nord.css';
+import './extra.css';
 
-// We execute this script by making an entry in manifest.json file
-// under `content_scripts` property
+const codeBlock = document.querySelectorAll('pre')[0];
 
-// For more information on Content Scripts,
-// See https://developer.chrome.com/extensions/content_scripts
+// get url for file extension for language
+const url = window.location.href;
 
-// Log `title` of current active web page
-const pageTitle: string =
-  document.head.getElementsByTagName('title')[0].innerHTML;
-console.log(
-  `Page title is: '${pageTitle}' - evaluated by Chrome extension's 'contentScript.js' file`
-);
+if (
+  url.includes('raw.githubusercontent.com') ||
+  url.includes('gist.githubusercontent.com')
+) {
+  // get the file extension
+  const fileExtension = url.split('.').pop();
+
+  // set the language for highlight.js as code class="language-<language>"
+  codeBlock.classList.add(`language-${fileExtension}`);
+
+  // highlight the code
+  hljs.highlightElement(codeBlock);
+}
 
 // Communicate with background file by sending a message
 chrome.runtime.sendMessage(

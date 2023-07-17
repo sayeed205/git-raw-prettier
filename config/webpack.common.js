@@ -2,10 +2,11 @@
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const PATHS = require('./paths');
 
-// used in the module rules and in the stats exlude list
+// used in the module rules and in the stats exclude list
 const IMAGE_TYPES = /\.(png|jpe?g|gif|svg)$/i;
 
 // To re-use webpack configuration across templates,
@@ -72,6 +73,20 @@ const common = {
       filename: '[name].css',
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {
+          ecma: 6,
+          output: {
+            ascii_only: true,
+          },
+        },
+      }),
+    ],
+  },
 };
 
 module.exports = common;

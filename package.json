@@ -1,10 +1,11 @@
 {
   "name": "git-raw-prettier",
   "version": "0.0.1",
-  "description": "Chrome extension for prettifying raw GitHub content",
+  "description": "Chrome extension for prettifying raw GitHub links",
   "private": true,
+  "browser": "",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production --config config/webpack.config.js",
     "dev": "webpack --mode=development --watch --config config/webpack.config.js",
     "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\"",
     "pack": "node pack.js",
@@ -25,12 +26,14 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
+    "highlight.js": "^11.8.0",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.0",
     "ts-loader": "^9.4.4",
     "typescript": "^5.1.6",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4",
-    "webpack-merge": "^5.9.0"
+    "webpack-merge": "^5.9.0",
+    "terser-webpack-plugin": "^5.3.9"
   }
 }
