@@ -30,6 +30,14 @@ Prettify your GitHub Gist and GitHub raw links with.
 
 - [ ] Add dropdown for selecting theme.
 
+## Screenshots
+
+![GitHub Gist](./screenshots/gist.png)
+GitHub Gist
+
+![GitHub Raw](./screenshots/raw.png)
+GitHub Raw
+
 ## License
 
 [MIT](./LICENSE)
