@@ -1,7 +1,7 @@
 'use strict';
 
 import hljs from 'highlight.js';
-import 'highlight.js/styles/nord.css';
+import 'highlight.js/styles/atom-one-dark.css';
 import './extra.css';
 
 const codeBlock = document.querySelectorAll('pre')[0];

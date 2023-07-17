@@ -30,6 +30,12 @@ Prettify your GitHub Gist and GitHub raw links with.
 
 - [ ] Add dropdown for selecting theme.
 
+- [ ] Add dropdown for font size.
+
+- [ ] Add dropdown for font family.
+
+- [ ] Add line numbers.
+
 ## Screenshots
 
 ![GitHub Gist](./screenshots/gist.png)
